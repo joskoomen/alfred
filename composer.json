@@ -22,8 +22,6 @@
         "guzzlehttp/guzzle": "~6.0",
         "symfony/console": "~3.0|~4.0",
         "symfony/filesystem": "~3.0|~4.0",
-        "symfony/process": "~3.0|~4.0",
-        "illuminate/database": "~5.7",
-        "robmorgan/phinx": "^0.10.6"
+        "symfony/process": "~3.0|~4.0"
     }
 }

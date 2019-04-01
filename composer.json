@@ -1,5 +1,6 @@
 {
     "name": "joskoomen/alfred",
+    "version": "1.0.1",
     "description": "Your Application Butler.",
     "keywords": [
         "laravel",

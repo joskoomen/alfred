@@ -64,7 +64,6 @@ class ScaffoldCommand extends Command
 
             $configFiles = @glob($dir . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . '*.scss');
 
-
             foreach ($configFiles as $file) {
 
                 try {
@@ -151,8 +150,8 @@ class ScaffoldCommand extends Command
                         if (strpos($import, 'helpers-spacings') !== false) {
                             $padding = str_replace("();", "-padding();", $import);
                             $margin = str_replace("();", "-margin();", $import);
-                            $newString .= "\n" . '//@include joskoomen-' . $padding;
-                            $newString .= "\n" . '//@include joskoomen-' . $margin;
+                            $newString .= "\n" . '//@include ' . $padding;
+                            $newString .= "\n" . '//@include ' . $margin;
                         } else {
                             $newString .= "\n" . '//@include ' . $import;
                         }

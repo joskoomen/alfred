@@ -1,6 +1,6 @@
 <?php
 
-namespace Alfred;
+namespace JosKoomen\Alfred;
 
 
 class SourcePaths

@@ -1,6 +1,6 @@
 <?php
 
-namespace Alfred;
+namespace JosKoomen\Alfred;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -36,8 +36,8 @@ class ScaffoldCommand extends Command
     /**
      * Execute the command.
      *
-     * @param  \Symfony\Component\Console\Input\InputInterface $input
-     * @param  \Symfony\Component\Console\Output\OutputInterface $output
+     * @param \Symfony\Component\Console\Input\InputInterface $input
+     * @param \Symfony\Component\Console\Output\OutputInterface $output
      * @return void
      */
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -132,7 +132,7 @@ class ScaffoldCommand extends Command
 
             $string = @file_get_contents($appFile);
 
-            $stringArr = explode("\n\n" . '@import "layouts";', $string);
+            $stringArr = explode("\n\n" . '@import "ui";', $string);
 
             $newString = $stringArr[0];
 
@@ -165,7 +165,7 @@ class ScaffoldCommand extends Command
                 }
             }
             $newString .= "\n\n";
-            $newString .= '@import "layouts";';
+            $newString .= '@import "ui";';
             if (isset($stringArr[1])) {
                 $newString .= $stringArr[1];
             }

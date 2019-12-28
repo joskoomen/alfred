@@ -50,7 +50,7 @@ class ScaffoldCommand extends Command
 
     protected function scaffoldConfig(InputInterface $input, OutputInterface $output, $directory)
     {
-        $modulesDir = @glob($directory . DIRECTORY_SEPARATOR . 'node_modules' . DIRECTORY_SEPARATOR . '@joskoomen/{scss-*,ui-*}' . DIRECTORY_SEPARATOR . 'scaffold', GLOB_BRACE);
+        $modulesDir = @glob($directory . DIRECTORY_SEPARATOR . 'node_modules' . DIRECTORY_SEPARATOR . '@ypa/{pickup-truck-*}' . DIRECTORY_SEPARATOR . 'scaffold', GLOB_BRACE);
         $filesystem = new Filesystem();
 
         $sourceDirectory = $directory . DIRECTORY_SEPARATOR . $this->sourceRoot;
@@ -89,7 +89,7 @@ class ScaffoldCommand extends Command
 
     protected function scaffoldImports(OutputInterface $output, $directory)
     {
-        $modulesDir = @glob($directory . DIRECTORY_SEPARATOR . 'node_modules' . DIRECTORY_SEPARATOR . '@joskoomen/scss-*');
+        $modulesDir = @glob($directory . DIRECTORY_SEPARATOR . 'node_modules' . DIRECTORY_SEPARATOR . '@ypa/pickup-truck-*');
 
         $sourceDirectory = $directory . DIRECTORY_SEPARATOR . $this->sourceRoot;
         $appFile = $sourceDirectory . DIRECTORY_SEPARATOR . 'scss' . DIRECTORY_SEPARATOR . 'app.scss';
@@ -143,7 +143,7 @@ class ScaffoldCommand extends Command
                 $newString .= '// YOU MAY REMOVE THIS COMMENT WHEN YOU UNDERSTAND.' . "\n";
             }
             foreach ($newImports as $import) {
-                $import = str_replace('~@joskoomen/scss-', '', $import . '()' . ";");
+                $import = str_replace('~@ypa/pickup-truck-', '', $import . '()' . ";");
 
                 if ($import !== 'core();') {
                     if (strpos($import, 'helpers') !== false) {
@@ -157,9 +157,9 @@ class ScaffoldCommand extends Command
                         }
                     } else {
                         if (strpos($import, 'core') !== false) {
-                            $newString .= "\n" . '//@include joskoomen-' . str_replace('core-', '', $import);
+                            $newString .= "\n" . '//@include ypa-' . str_replace('core-', '', $import);
                         } else {
-                            $newString .= "\n" . '//@include joskoomen-' . $import;
+                            $newString .= "\n" . '//@include ypa-' . $import;
                         }
                     }
                 }

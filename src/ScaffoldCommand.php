@@ -1,6 +1,6 @@
 <?php
 
-namespace JosKoomen\Alfred;
+namespace Ypa\Alfred;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

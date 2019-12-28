@@ -4,7 +4,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 
-$app = new Symfony\Component\Console\Application('Alfred', '1.0.5');
-$app->add(new JosKoomen\Alfred\ScaffoldCommand());
+$app = new Symfony\Component\Console\Application('Alfred', '2.0.0');
+$app->add(new Ypa\Alfred\ScaffoldCommand());
 
 $app->run();

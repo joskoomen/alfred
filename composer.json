@@ -1,6 +1,6 @@
 {
   "name": "joskoomen/alfred",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Your Application Butler.",
   "keywords": [
     "laravel",
@@ -10,12 +10,12 @@
   "authors": [
     {
       "name": "Jos Koomen",
-      "email": "hello@joskoo.men"
+      "email": "jos@yourpersonalagency.nl"
     }
   ],
   "autoload": {
     "psr-4": {
-      "JosKoomen\\Alfred\\": "src/"
+      "Ypa\\Alfred\\": "src/"
     }
   },
   "require": {
